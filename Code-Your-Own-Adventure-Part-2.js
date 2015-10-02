@@ -6,6 +6,7 @@ function sleep(milliseconds) {
         }
     }
 }
+
 console.log(".....Decisions are Case sensitive.....");
 
 console.log("A bright light shines in your eyes as you open them");
@@ -54,7 +55,78 @@ switch(castleStart) {
         var villageStart = prompt("Where would you like to go? (Investigate the Village, Follow Village Path or Other)");
         switch(villageStart) {
             case "Investigate the Village":
-                console.log("");
+                console.log("You approach the village and a night black fox comes out of the first house");
+                sleep(6000);
+                console.log("A sharp stick is laying by your foot, you grab it and clench it in your fist");
+                sleep(4000);
+                function foxBack() {
+                    console.log("You charge the fox");
+                }
+                    sleep(2000);
+                    var slayingWood = true;
+                    var youHit = Math.floor(Math.random() * 100);
+                    var damageThisRound = Math.floor(Math.random() * 5 + 1);
+                    var totalDamage = 0;
+                    while(slayingWood) {
+                        if(youHit > 21) {
+                            console.log("You hit the fox and did " + damageThisRound + " damage!");
+                            totalDamage += damageThisRound;
+
+                            if(totalDamage >= 4) {
+                                console.log("The stick pierces the foxes hide and it lays limp on the dirt floor");
+                                slayingWood = false;
+                                sleep(6000);
+                                console.log("You make a holster for your wooden stick out of a hole in your pants and investigate the building it came out of");
+                                sleep(6000);
+                                console.log("Inside is the remains of a man, rotting away by time");
+                                sleep(6000);
+                                console.log("Besides the corpse the stray hut is empty as if whoever lived here had deserted");
+                                sleep(6000);
+                                console.log("You check the rest of the huts....");
+                                sleep(6000);
+                                console.log("Their all burnt down to nothing, however in the center of the village you find an old rusty automobile");
+                                sleep(6000);
+                                console.log("Right as you start to check out the car a loud scream comes echoing out from deep in forest");
+                                var oldAutomobile = prompt("What will you do? (Check Car or Go to Scream");
+                                switch(oldAutomobile) {
+                                    case "Check Car":
+                                        console.log("You attempt to hot wire the car");
+                                        sleep(6000);
+                                        var startingCar = true;
+                                        var itStarted = Math.floor(Math.random() * 10);
+                                        while(startingCar) {
+                                            if(itStarted <= 5) {
+                                                console.log("The car comes to life...");
+                                                startingCar = false;
+                                                sleep(6000);
+                                                console.log("The cars gas indicator says the automobile is at half a tank");
+                                                sleep(6000);
+                                                console.log("............................Continue Here...................................");
+                                            }
+                                            else {
+                                                console.log("The car failed to start...");
+                                                sleep(6000);
+                                                startingCar = false;
+                                                console.log("...........................Continue Here...................................");
+                                            }
+                                        }
+                                        break;
+                                }
+                            }
+                            else {
+                                youHit = Math.floor(Math.random() * 2);
+                                console.log("..................................Continue Here................................")
+                            }
+                        }
+                        else {
+                            console.log("The fox leaps and gets you on the neck");
+                            slayingWood = false;
+                            sleep(6000);
+                            console.log("You fall on the floor and watch as your life slips away");
+                            alert("Restarting");
+                            foxBack();
+                        }
+                    }
                 break;
             case "Follow Village Path":
                 console.log("");
@@ -62,20 +134,23 @@ switch(castleStart) {
             default:
                 console.log("Finding both the village and path sketchy you head the opposite direction and follow the tree line North");
                 sleep(6000);
-                console.log("");
+                console.log("..........................................Continue Here................................");
                 break;
         }
         break;
     case "Locked Buildings":
         console.log("You descend the stairs of and exit the inner castle into the outer keep");
+        backLocked();
         sleep(6000);
         function backLocked() {
+            sleep(6000);
             console.log("A building with a stone chimney and black iron anvil draws your attention");
             sleep(6000);
+            console.log("....................................Continue Here..............................")
         }
         break;
     case "Into the Dunes":
-        console.log("");
+        console.log("..................................Continue Here......................................");
         break;
     default:
         console.log("Standing around confused you descend to the bottom of the keep");
