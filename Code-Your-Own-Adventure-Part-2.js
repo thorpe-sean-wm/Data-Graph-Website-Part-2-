@@ -23,7 +23,6 @@ console.log("What was your past? How did you get here? You can't remember...");
 sleep(6000);
 console.log("As you stare off into the endless dunes it hits you");
 sleep(2000);
-
 var greeting = function(name) {
     console.log("Your name was " + name);
 };
@@ -139,18 +138,76 @@ switch(castleStart) {
         }
         break;
     case "Locked Buildings":
-        console.log("You descend the stairs of and exit the inner castle into the outer keep");
+        console.log("You descend the stairs and exit the inner castle into the outer keep");
         backLocked();
         sleep(6000);
         function backLocked() {
             sleep(6000);
             console.log("A building with a stone chimney and black iron anvil draws your attention");
             sleep(6000);
-            console.log("....................................Continue Here..............................")
+            console.log("You break down the front door and walk in to find a fully equipped armory");
+            sleep(6000);
+            console.log("Along the wall's you see a Mace and Shield, a pair of Swords, and a War Axe");
+            sleep(6000);
+            var weaponDamage = [ "Mace and Shield is strong against bulky creatures", "the Swords are strong against giant waves of animals", "War Axe is strongest against giant monsters" ];
+            var weaponChoose = prompt("Which weapon will you take? (Mace and Shield, Swords or War Axe");
+            switch(weaponChoose) {
+                case "Mace and Shield":
+                    console.log("Picking up the Mace and Shield you strike the ground with the mace");
+                    sleep(6000);
+                    console.log("The mace thuds into the ground and looks to be in great shape");
+                    sleep(6000);
+                    console.log("Your shield appears to be a little rusted but is sturdy enough");
+                    sleep(6000);
+                    console.log(weaponDamage[0]);
+                    sleep(6000);
+                    break;
+                case "Swords":
+                    console.log("Picking up the Swords you swing them around");
+                    sleep(6000);
+                    console.log("They hiss as you slice through the air");
+                    sleep(6000);
+                    console.log("The Swords appear to be in perfect condition with only one speck of rust");
+                    sleep(6000);
+                    console.log(weaponDamage[1]);
+                    sleep(6000);
+                    break;
+                case "War Axe":
+                    console.log("Picking up the War Axe you take a swing at the door");
+                    sleep(6000);
+                    console.log("Despite the marks of rust on the iron of the blade");
+                    sleep(6000);
+                    console.log("The door splinters into pieces leaving an empty doorway when the door use to be");
+                    sleep(6000);
+                    console.log(weaponDamage[2]);
+                    sleep(6000);
+                    break;
+                default:
+                    console.log("");
+                    break;
+            }
         }
         break;
     case "Into the Dunes":
-        console.log("..................................Continue Here......................................");
+        console.log("You leave the castle and wander out into the Dunes without even looking back at the castle");
+        sleep(6000);
+        console.log("After several hours the scenery has yet to change....");
+        sleep(6000);
+        console.log("It feels as if days have passed, you collapse onto the soft sand and slowly drift unconscious");
+        sleep(6000);
+        console.log("...You are barely conscious....There is someone next to you...The endless dunes are gone and a warm tent surrounds you");
+        sleep(8000);
+        console.log( "'" + name + ", wake up its me!' a voice calls out");
+        sleep(6000);
+        console.log("Coming back to consciousness you look around and see the warm pillows and rugs covering the huge 10 man tent");
+        sleep(6000);
+        console.log("To your side is a young female, her hair is a deep red and her face is gentle yet pretty");
+        sleep(6000);
+        console.log("Who are you?");
+        sleep(6000);
+        console.log("'Your sister' She responds");
+        sleep(6000);
+        alert("to be continued");
         break;
     default:
         console.log("Standing around confused you descend to the bottom of the keep");
