@@ -27,6 +27,7 @@ var greeting = function(name) {
     console.log("Your name was " + name);
 };
 greeting(prompt("What is your name?"));
+//hi
 
 console.log("Remembering this small fragment of yourself you think of what to do next");
 sleep(8000);
